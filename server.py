@@ -1,3 +1,6 @@
+# http://www.binarytides.com/python-socket-server-code-example/
+# https://github.com/Uberi/speech_recognition#readme
+
 import socket
 
 def Main():
@@ -17,6 +20,9 @@ def Main():
 		if not data:
 			break
 		outgoing = raw_input(">> ")
+		if outgoing == 'q':
+			c.close()
+
 		print("from connected user: " + str(data))
 		# data = str(data).upper()
 		# print ("sending: " + str(data))
